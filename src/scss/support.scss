@@ -1,0 +1,52 @@
+$color--gold: #BBAB68;
+$color--grey: #D0D0D0;
+$color--secondary: white;
+$color--primary: black;
+
+
+$columns: 12;
+$columns-gap: 30px;
+$desktop-screen: 1200px;
+$tablet-screen: 756px;
+$mobile-screen: 320px;
+
+@mixin media-phone {
+  @media (max-width: #{$tablet-screen}) {/*756*/
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (min-width: #{$tablet-screen + 1px}) and (max-width: #{$desktop-screen - 1px}) {/*757-1199*/
+    @content;
+  }
+}
+
+@mixin media-desktop {
+  @media (min-width: #{$desktop-screen}) {/*1200*/
+    @content;
+  }
+}
+@mixin breaking-container {
+  margin: 0 auto;
+}
+
+@mixin font--MontNormalLight {
+  font-family: 'Mont-Light';
+  font-weight: 300;
+}
+
+@mixin font--MontNormalHeavy {
+  font-family: 'Mont-Heavy';
+  font-weight: 900;
+}
+
+/* font-weight: 100;   Thin                    */
+/* font-weight: 200;   Extra Light             */
+/* font-weight: 300;   Light                   */
+/* font-weight: 400;   Normal                  */
+/* font-weight: 500;   Medium                  */
+/* font-weight: 600;   Semi Bold (Demi Bold)   */
+/* font-weight: 700;   Bold                    */
+/* font-weight: 800;   Extra Bold              */
+/* font-weight: 900;   Black (Heavy)           */
